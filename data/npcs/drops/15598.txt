@@ -1,0 +1,2 @@
+RareDropTable=false
+24505, 1, 1, 0

@@ -1,0 +1,3 @@
+RareDropTable=false
+7532, 1, 1, 0
+407, 1, 1, 1

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/MaxScape830/MaxScape830Server/library/adbcj-api-0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/MaxScape830/MaxScape830Server/library/adbcj-mysql-0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/MaxScape830/MaxScape830Server/library/FileStore.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/MaxScape830/MaxScape830Server/library/gson-2.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/MaxScape830/MaxScape830Server/library/GTLVote.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/MaxScape830/MaxScape830Server/library/mchange-commons-java-0.2.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/MaxScape830/MaxScape830Server/library/minifs_v1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/MaxScape830/MaxScape830Server/library/mysql-connector-5.1.22.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/MaxScape830/MaxScape830Server/library/netty-3.7.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/MaxScape830/MaxScape830Server/library/TStore.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

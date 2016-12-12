@@ -1,0 +1,52 @@
+package net.kagani.game.npc.familiar.impl;
+
+import net.kagani.game.WorldTile;
+import net.kagani.game.npc.familiar.Familiar;
+import net.kagani.game.player.Player;
+import net.kagani.game.player.actions.Summoning.Pouch;
+import net.kagani.game.player.content.Magic;
+
+public class Voidravager extends Familiar {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3950385081972248371L;
+
+	public Voidravager(Player owner, Pouch pouch, WorldTile tile,
+			int mapAreaNameHash, boolean canBeAttackFromOutOfArea) {
+		super(owner, pouch, tile, mapAreaNameHash, canBeAttackFromOutOfArea);
+	}
+
+	@Override
+	public String getSpecialName() {
+		return "Call To Arms";
+	}
+
+	@Override
+	public String getSpecialDescription() {
+		return "Teleports the player to Void Outpost.";
+	}
+
+	@Override
+	public int getBOBSize() {
+		return 0;
+	}
+
+	@Override
+	public int getSpecialAmount() {
+		return 4;
+	}
+
+	@Override
+	public SpecialAttack getSpecialAttack() {
+		return SpecialAttack.CLICK;
+	}
+
+	@Override
+	public boolean submitSpecial(Object object) {
+		Magic.sendTeleportSpell((Player) object, 14388, -1, 1503, 1502, 0, 0,
+				new WorldTile(2662, 2649, 0), 3, true, Magic.OBJECT_TELEPORT);
+		return true;
+	}
+}

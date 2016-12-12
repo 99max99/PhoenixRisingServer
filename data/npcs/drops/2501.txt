@@ -1,0 +1,2 @@
+RareDropTable=false
+6335, 1, 1, 0
