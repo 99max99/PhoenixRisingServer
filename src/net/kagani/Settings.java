@@ -15,7 +15,11 @@ public final class Settings {
 
 	public static List<Integer> GRAND_EXCHANGE_INSTANT_BUYABLES = new ArrayList<Integer>();
 
+<<<<<<< HEAD
 	public static final String VPS1_IP = "127.0.0.1", VPS2_IP = "127.0.0.1";
+=======
+	public static final String VPS1_IP = "127.0.0.1", VPS2_IP = "";
+>>>>>>> origin/master
 
 	public static final String UPDATE_TOPIC_TITLE = "Added All Barrow, Shadow and Third-age item dyeing";
 	public static final int UPDATE_TOPIC_ID = 594;
@@ -203,7 +207,11 @@ public final class Settings {
 					new WorldInformation(2, 0, "World2", 0, 0x2 | 0x8, "Test World", VPS2_IP, 100) };
 		} else {
 			WORLDS_INFORMATION = new WorldInformation[] {
+<<<<<<< HEAD
 					new WorldInformation(1, 0, "World1", 0, 0x2 | 0x8, "Localhost", VPS2_IP, 100),
+=======
+					new WorldInformation(1, 0, "World1", 0, 0x2 | 0x8, "Localhost", "127.0.0.1", 100),
+>>>>>>> origin/master
 
 					new WorldInformation(2, 0, "World2", 0, 0x2 | 0x8, "Phoenix Rising", VPS1_IP, 100),
 
@@ -213,7 +221,7 @@ public final class Settings {
 
 	public static final int ENCRYPTION = 146393208, HASH = 183583083;
 
-	private static char HASH_CODE[] = { 'æ', 'ø', 'å' };
+	private static char HASH_CODE[] = { 'Ã¦', 'Ã¸', 'Ã¥' };
 
 	public static final String ENCRYPDATA = "0e249c178948f05ecfd1b78a4ab382430b95f76b0fba662182ac3289567d8e86",
 			HASHDATA = "8f7441d51c17e6768f87ef75a420564a9577538c5b69dd0f5bb91e673ded91d9";
