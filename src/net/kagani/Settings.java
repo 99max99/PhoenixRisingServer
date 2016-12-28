@@ -15,18 +15,18 @@ public final class Settings {
 
 	public static List<Integer> GRAND_EXCHANGE_INSTANT_BUYABLES = new ArrayList<Integer>();
 
-	public static final String VPS1_IP = "35.160.34.106", VPS2_IP = "";
+	public static final String VPS1_IP = "127.0.0.1", VPS2_IP = "127.0.0.1";
 
-	public static final String UPDATE_TOPIC_TITLE = "IronManXpRate set to 1x and IronManDropRate set to +25%";
+	public static final String UPDATE_TOPIC_TITLE = "Added All Barrow, Shadow and Third-age item dyeing";
 	public static final int UPDATE_TOPIC_ID = 594;
 
-	public static final String SERVER_NAME = "MaxScape831";
+	public static final String SERVER_NAME = "Phoenix Rising";
 	public static final String CACHE_PATH = new String(System.getProperty("user.home") + "/Desktop/cache/");
 	public static final String DATA_PATH = "data/server_data";
 
 	public static final String HELP_ACCOUNT = SERVER_NAME.toLowerCase();
-	public static final String[] SERVER_ADMINISTRATORS = { "99max99", "Brandon", "reddragon", "llama", "husky" };
-	public static final String[] SERVER_MODERATORS = { "wyatt", "iamsorry4u" };
+	public static final String[] SERVER_ADMINISTRATORS = { "99max99", "wyatt", "blaze" };
+	public static final String[] SERVER_MODERATORS = { "iamsorry4u" };
 
 	public static final boolean GERO_ENABLED = false;
 
@@ -74,7 +74,7 @@ public final class Settings {
 			"Check out bank presets, a very handy tool." };
 			//"New to " + SERVER_NAME + "? Read ::topic 575 - a starter guide!" };
 
-	public static final int[] TRADEABLE_EXCEPTION = new int[] { 30372, };
+	public static final int[] TRADEABLE_EXCEPTION = new int[] { 30372 };
 
 	public static double getLampXpRate() {
 		return XP_RATE - 0.7d;
@@ -198,14 +198,14 @@ public final class Settings {
 
 		if (Settings.HOSTED) {
 			WORLDS_INFORMATION = new WorldInformation[] {
-					new WorldInformation(1, 0, "World1", 0, 0x2 | 0x8, "MaxScape830", VPS1_IP, 100),
+					new WorldInformation(1, 0, "World1", 0, 0x2 | 0x8, "Phoenix Rising", VPS1_IP, 100),
 
 					new WorldInformation(2, 0, "World2", 0, 0x2 | 0x8, "Test World", VPS2_IP, 100) };
 		} else {
 			WORLDS_INFORMATION = new WorldInformation[] {
-					new WorldInformation(1, 0, "World1", 0, 0x2 | 0x8, "Localhost", "35.160.34.106", 100),
+					new WorldInformation(1, 0, "World1", 0, 0x2 | 0x8, "Localhost", VPS2_IP, 100),
 
-					new WorldInformation(2, 0, "World2", 0, 0x2 | 0x8, "MaxScape830", VPS1_IP, 100),
+					new WorldInformation(2, 0, "World2", 0, 0x2 | 0x8, "Phoenix Rising", VPS1_IP, 100),
 
 					new WorldInformation(3, 0, "World3", 0, 0x2 | 0x8, "Test World", VPS2_IP, 100) };
 		}

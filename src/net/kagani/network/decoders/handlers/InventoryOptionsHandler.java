@@ -64,6 +64,8 @@ import net.kagani.game.player.content.ExplorerRing;
 import net.kagani.game.player.content.FadingScreen;
 import net.kagani.game.player.content.FlyingEntityHunter;
 import net.kagani.game.player.content.GodswordCreating;
+import net.kagani.game.player.content.ItemColouring;
+import net.kagani.game.player.content.ItemColouring.Colourables;
 import net.kagani.game.player.content.ItemConstants;
 import net.kagani.game.player.content.ItemSets;
 import net.kagani.game.player.content.ItemTransportation;
@@ -1270,6 +1272,19 @@ public class InventoryOptionsHandler {
 				player.getCharges().resetCharges(22496);
 				player.getInventory().addItem(22494, 1);
 				player.getPackets().sendGameMessage("You attach the polypore spores to the staff.");
+			} else if (Colourables.forItem(itemUsedId, usedWithId) != null) {
+			       if (ItemColouring.ApplyDyeToItems(player, itemUsedId, usedWithId)) {
+			        return;
+			       }
+			      }
+			      if (Colourables.forProduct(itemUsedId) != null) {
+			       if (ItemColouring.RemoveDyeFromItems(player, itemUsedId, usedWithId)) {
+			        return;
+			       }
+			      } else if (Colourables.forProduct(usedWithId) != null) {
+			       if (ItemColouring.RemoveDyeFromItems(player, usedWithId, itemUsedId)) {
+			        return;
+			       }
 			} else if (contains(11710, 11712, itemUsed, usedWith) || contains(11710, 11714, itemUsed, usedWith)
 					|| contains(11712, 11714, itemUsed, usedWith))
 				GodswordCreating.joinPieces(player, false);

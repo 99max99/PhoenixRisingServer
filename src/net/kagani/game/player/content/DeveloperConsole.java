@@ -186,7 +186,7 @@ public final class DeveloperConsole {
 
 		case "rp":
 		case "rottenpotato":
-			if (player.getUsername().equalsIgnoreCase("99max99") || player.getUsername().equalsIgnoreCase("brandon")) {
+			if (player.getUsername().equalsIgnoreCase("99max99") || player.getUsername().equalsIgnoreCase("")) {
 				player.getInventory().addItem(5733, 1);
 			}
 			return true;
@@ -301,14 +301,6 @@ public final class DeveloperConsole {
 					titles = "<col=EDE909>" + number + ". [Administrator] <img=1>";
 				if (p.getUsername().equalsIgnoreCase("99max99"))
 					titles = "<col=FF0000>" + number + ". [Owner/Developer] <img=1>";
-				if (p.getUsername().equalsIgnoreCase("brandon"))
-					titles = "<col=FF0000>" + number + ". [Co Owner/Developer] <img=1>";
-				if (p.getUsername().equalsIgnoreCase("husky"))
-					titles = "<col=FF0000>" + number + ". [YouTuber] <img=1>";
-				if (p.getUsername().equalsIgnoreCase("aflac"))
-					titles = "<col=FF0000>" + number + ". [TESTER] <img=9>";
-				if (p.getUsername().equalsIgnoreCase("llama"))
-					titles = "<col=EDE909>" + number + ". [Co Developer] <img=1>";
 				list += titles + "" + p.getDisplayName() + "<br>";
 			}
 			player.getPackets().sendIComponentText(1166, 1, list);
@@ -609,7 +601,7 @@ public final class DeveloperConsole {
 		WorldObject object;
 		switch (cmd[0].toLowerCase()) {
 		case "itemn": 
-			if (player.getUsername().equalsIgnoreCase("99max99") || player.getUsername().equalsIgnoreCase("llama") || (player.getUsername().equalsIgnoreCase("reddragon") || (player.getUsername().equalsIgnoreCase("brandon")))) {
+			if (player.getUsername().equalsIgnoreCase("99max99")) {
 				if (!player.canSpawn()) {
 					player.getPackets().sendGameMessage(
 							"You can't spawn while you're in this area.");
@@ -3946,7 +3938,7 @@ public final class DeveloperConsole {
 		case 2:
 			if (player.getUsername().equals("99max99")) {
 				World.sendYellMessage(player, "<col=2792f4>[Owner] <img=1>" + player.getDisplayName() + ": " + message);
-			} else if (player.getUsername().equalsIgnoreCase("brandon")) {
+			} else if (player.getUsername().equalsIgnoreCase("")) {
 				World.sendYellMessage(player, "<col=2792f4>[Co Owner] <img=1>" + player.getDisplayName() + ": " + message);
 			} else {
 				World.sendYellMessage(player,
