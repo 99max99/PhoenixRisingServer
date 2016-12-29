@@ -26,7 +26,7 @@ public class MeleeAttack implements AraxxorAttack {
 				 * Animation(Combat.getDefenceEmote(victim))); //hit = 0; hit =
 				 * Utils.random(0 + Utils.random(150), 360); } else {
 				 */
-				hit = Utils.random(0 + Utils.random(1050), 3000);
+				hit = Utils.random(0 + Utils.random(750), 1250);
 				npc.setNextAnimation(new Animation(24046));
 				victim.setNextAnimation(new Animation(Combat.getDefenceEmote(victim)));
 				// }
