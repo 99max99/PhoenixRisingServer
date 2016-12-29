@@ -43,8 +43,8 @@ public class AraxxiCombat extends CombatScript {
 									araxxi,
 									0,
 									t,
-									new Hit(araxxi, (int) (Utils.random(4000,
-											6500) * araxxi.damageMulti),
+									new Hit(araxxi, (int) (Utils.random(2000,
+											3250) * araxxi.damageMulti),
 											HitLook.REGULAR_DAMAGE));
 
 						}
@@ -166,7 +166,7 @@ public class AraxxiCombat extends CombatScript {
 						getRangeHit(
 								npc,
 								getMaxHit(npc,
-										(int) (5000 * araxxi.damageMulti),
+										(int) (2500 * araxxi.damageMulti),
 										NPCCombatDefinitions.RANGE, target)));
 				npc.setNextAnimation(new Animation(24095));
 				World.sendProjectile(npc, target, 4997, 41, 16, 41, 0, 16, -20);
@@ -180,7 +180,7 @@ public class AraxxiCombat extends CombatScript {
 						getMagicHit(
 								npc,
 								getMaxHit(npc,
-										(int) (5000 * araxxi.damageMulti),
+										(int) (2500 * araxxi.damageMulti),
 										NPCCombatDefinitions.MAGE, target)));
 				npc.setNextAnimation(new Animation(24095));
 				World.sendProjectile(npc, target, 4979, 41, 16, 41, 0, 16, -20);
