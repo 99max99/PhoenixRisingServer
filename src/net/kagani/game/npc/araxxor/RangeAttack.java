@@ -21,7 +21,7 @@ public class RangeAttack implements AraxxorAttack {
 				stop();
 				int hit = 0;
 				World.sendProjectile(npc, p, 4990, 41, 16, 21, 0, 16, -20);
-				hit = Utils.random(0 + Utils.random(1000), 3000);
+				hit = Utils.random(0 + Utils.random(750), 1250);
 				npc.setNextAnimation(new Animation(24047));
 				p.setNextAnimation(new Animation(Combat.getDefenceEmote(p)));
 
