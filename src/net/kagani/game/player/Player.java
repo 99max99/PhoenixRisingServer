@@ -1231,12 +1231,12 @@ public class Player extends Entity {
 	}
 
 	private void sendLoginMessages() {
-		getPackets().sendForceGameMessage(Color.MAROON,
-				"Please consider checking out RuneRewind at www.runerewind.com - an oldschool project.");
-		getPackets().sendForceGameMessage(
-				!Settings.DEBUG ? "Welcome to " + Settings.SERVER_NAME + "." : "Welcome to 99max99' crazy world.");
-		getPackets().sendGameMessage(Color.MAROON, "Read update topic: '" + Settings.UPDATE_TOPIC_TITLE
-				+ "' at ::topic " + Settings.UPDATE_TOPIC_ID + ".");
+// 		getPackets().sendForceGameMessage(Color.MAROON,
+// 				"Please consider checking out RuneRewind at www.runerewind.com - an oldschool project.");
+// 		getPackets().sendForceGameMessage(
+// 				!Settings.DEBUG ? "Welcome to " + Settings.SERVER_NAME + "." : "Welcome to 99max99' crazy world.");
+// 		getPackets().sendGameMessage(Color.MAROON, "Read update topic: '" + Settings.UPDATE_TOPIC_TITLE
+// 				+ "' at ::topic " + Settings.UPDATE_TOPIC_ID + ".");
 		if (getRights() >= 1 && JModTable.PMOD_MEETING)
 			getPackets().sendGameMessage(
 					"<col=FF0000>A staff meeting has been requested, please use the command ::accept to teleport.");
