@@ -14,12 +14,8 @@ import net.kagani.login.WorldInformation;
 public final class Settings {
 
 	public static List<Integer> GRAND_EXCHANGE_INSTANT_BUYABLES = new ArrayList<Integer>();
-
-<<<<<<< HEAD
+	
 	public static final String VPS1_IP = "127.0.0.1", VPS2_IP = "127.0.0.1";
-=======
-	public static final String VPS1_IP = "127.0.0.1", VPS2_IP = "";
->>>>>>> origin/master
 
 	public static final String UPDATE_TOPIC_TITLE = "Added All Barrow, Shadow and Third-age item dyeing";
 	public static final int UPDATE_TOPIC_ID = 594;
@@ -207,11 +203,7 @@ public final class Settings {
 					new WorldInformation(2, 0, "World2", 0, 0x2 | 0x8, "Test World", VPS2_IP, 100) };
 		} else {
 			WORLDS_INFORMATION = new WorldInformation[] {
-<<<<<<< HEAD
 					new WorldInformation(1, 0, "World1", 0, 0x2 | 0x8, "Localhost", VPS2_IP, 100),
-=======
-					new WorldInformation(1, 0, "World1", 0, 0x2 | 0x8, "Localhost", "127.0.0.1", 100),
->>>>>>> origin/master
 
 					new WorldInformation(2, 0, "World2", 0, 0x2 | 0x8, "Phoenix Rising", VPS1_IP, 100),
 
