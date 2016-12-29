@@ -290,8 +290,22 @@ public class GrandExchange {
 	private static void findBuyerSeller(Offer offer) {
 		while (!offer.isCompleted()) {
 			Offer bestOffer = null;
-			if ((offer.isBuying() && offer.getPrice() >= GrandExchange.getPrice(offer.getId())) || (!offer.isBuying() && offer.getPrice() <= GrandExchange.getPrice(offer.getId()))) {
-			    bestOffer = new Offer(offer.getId(), offer.getAmount(), GrandExchange.getPrice(offer.getId()), !offer.isBuying());
+			for (Offer o : OFFERS.values()) {
+				// owner is null when not logged in but u online its on so works
+				if (o.getOwner() == offer.getOwner()
+						|| o.isBuying() == offer.isBuying()
+						|| o.getId() != offer.getId()
+						|| o.isCompleted()
+						|| (offer.isBuying() && o.getPrice() > offer.getPrice())
+						|| (!offer.isBuying() && o.getPrice() < offer
+								.getPrice()) || offer.isOfferTooHigh(o))
+					continue;
+				if (bestOffer == null
+						|| (offer.isBuying() && o.getPrice() < bestOffer
+								.getPrice())
+						|| (!offer.isBuying() && o.getPrice() > bestOffer
+								.getPrice()))
+					bestOffer = o;
 			}
 			if (bestOffer == null)
 				break;
@@ -301,22 +315,8 @@ public class GrandExchange {
 	}
 //		while (!offer.isCompleted()) {
 //			Offer bestOffer = null;
-//			for (Offer o : OFFERS.values()) {
-//				// owner is null when not logged in but u online its on so works
-//				if (o.getOwner() == offer.getOwner()
-//						|| o.isBuying() == offer.isBuying()
-//						|| o.getId() != offer.getId()
-//						|| o.isCompleted()
-//						|| (offer.isBuying() && o.getPrice() > offer.getPrice())
-//						|| (!offer.isBuying() && o.getPrice() < offer
-//								.getPrice()) || offer.isOfferTooHigh(o))
-//					continue;
-//				if (bestOffer == null
-//						|| (offer.isBuying() && o.getPrice() < bestOffer
-//								.getPrice())
-//						|| (!offer.isBuying() && o.getPrice() > bestOffer
-//								.getPrice()))
-//					bestOffer = o;
+//			if ((offer.isBuying() && offer.getPrice() >= GrandExchange.getPrice(offer.getId())) || (!offer.isBuying() && offer.getPrice() <= GrandExchange.getPrice(offer.getId()))) {
+//			    bestOffer = new Offer(offer.getId(), offer.getAmount(), GrandExchange.getPrice(offer.getId()), !offer.isBuying());
 //			}
 //			if (bestOffer == null)
 //				break;
@@ -324,6 +324,7 @@ public class GrandExchange {
 //		}
 //		offer.update();
 //	}
+		
 
 	private static long createOffer(Offer offer) {
 		edited = true;
