@@ -104,7 +104,7 @@ public class EggAttack implements AraxxorAttack {
 					p.applyHit(new Hit(p, hit, hit == 0 ? HitLook.MISSED
 							: HitLook.MAGIC_DAMAGE));
 
-					p.applyHit(new Hit(p, 2000, HitLook.MAGIC_DAMAGE, 0));
+					p.applyHit(new Hit(p, 500, HitLook.MAGIC_DAMAGE, 0));
 
 				}
 			}, 0, 0);
