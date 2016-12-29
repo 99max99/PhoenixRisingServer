@@ -35,7 +35,7 @@ public class MagicAttack implements AraxxorAttack {
 				 */
 
 				World.sendProjectile(npc, p, 4979, 41, 16, 41, 0, 16, -20);
-				hit = Utils.random(0 + Utils.random(1500), 3050);
+				hit = Utils.random(0 + Utils.random(750), 2000);
 				npc.setNextAnimation(new Animation(24095));
 				p.setNextGraphics(new Graphics(4980));
 
